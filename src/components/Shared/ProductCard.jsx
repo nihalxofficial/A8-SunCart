@@ -58,9 +58,9 @@ const ProductCard = ({ product, popularSale }) => {
           {product.category}
         </p>
 
-        <div className="mb-4">
+        <div className="mb-4 flex gap-2  items-center">
           <span className="text-2xl font-bold text-amber-600">${product.price}</span>
-
+          <span className="text-sm text-stone-400 line-through">${(product.price * 2).toFixed(2)}</span>
         </div>
 
         <div className="flex items-center gap-2">
