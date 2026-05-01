@@ -1,16 +1,37 @@
-import React from 'react';
+"use client"
+import React, { useEffect } from 'react';
 import Link from 'next/link';
 import { ChevronRight, Filter, Grid3x3, List } from 'lucide-react';
 import ProductCard from '@/components/Shared/ProductCard';
+import { useSearchParams } from 'next/navigation';
+import {  useState } from "react";
 
-const ProductsPage = async ({ searchParams }) => {
-    const { category } = await searchParams;
 
-    const res = await fetch("http://localhost:3000//products.json");
-    const products = await res.json();
+const ProductsPage = () => {
+     
+    const searchParams = useSearchParams();
+    const category = searchParams.get("category");
 
-    const catRes = await fetch("http://localhost:3000//category.json");
-    const categories = await catRes.json();
+    const [products, setProducts] = useState([]);
+    const [categories, setCategories] = useState([]);
+
+    const [isGrid, setIsGrid] = useState(true);
+    console.log(isGrid);
+    
+
+    useEffect(() => {
+        const fetchData = async () => {
+                const res = await fetch("/products.json");
+                const data = await res.json();
+                setProducts(data);
+
+                const catRes = await fetch("/category.json");
+                const catData = await catRes.json();
+                setCategories(catData);
+        };
+
+        fetchData();
+    }, []);
 
     const filteredProducts = category ? products.filter(product => product.category.toLowerCase() === category.toLowerCase()) : products;
 
@@ -47,7 +68,7 @@ const ProductsPage = async ({ searchParams }) => {
 
                             <div className="p-3">
                                 <Link
-                                    href="/products"
+                                    href="/all-products"
                                     className={`flex  items-center justify-between px-3 py-2.5 rounded-lg bg-linear-to-r ${!category ? "from-sky-500 to-cyan-400 text-white font-semibold" : "hover:bg-amber-50 text-stone-600 hover:text-sky-600 text-sm transition group"} `}
                                 >
                                     <span className="flex items-center gap-2">
@@ -62,7 +83,7 @@ const ProductsPage = async ({ searchParams }) => {
                                     return (
                                         <Link
                                             key={cat.id}
-                                            href={`/products?category=${cat.name.toLowerCase()}`}
+                                            href={`/all-products?category=${cat.name.toLowerCase()}`}
                                             className={`flex items-center justify-between px-3 py-2 rounded-lg bg-linear-to-r ${category?.toLowerCase() === cat.name.toLowerCase() ? "from-sky-500 to-cyan-400 text-white font-semibold" : "hover:bg-amber-50 text-stone-600 hover:text-sky-600 text-sm transition group"}`}
                                         >
                                             <span className="flex items-center gap-2">
@@ -100,10 +121,10 @@ const ProductsPage = async ({ searchParams }) => {
                                         <option>Best Rating</option>
                                     </select>
                                     <div className="flex gap-1 border-l border-sky-200 pl-3">
-                                        <button className="p-1.5 cursor-pointer rounded bg-sky-50 text-sky-600">
+                                        <button onClick={()=>setIsGrid(true)} className={`p-1.5 cursor-pointer rounded  ${isGrid ? "bg-sky-50 text-sky-600" : "text-stone-400 hover:bg-amber-50 hover:text-amber-600 transition"}`}>
                                             <Grid3x3 size={16} />
                                         </button>
-                                        <button className="p-1.5 cursor-pointer rounded text-stone-400 hover:bg-amber-50 hover:text-amber-600 transition">
+                                        <button onClick={()=>setIsGrid(false)} className={`p-1.5 cursor-pointer rounded ${!isGrid ? "bg-sky-50 text-sky-600" : "text-stone-400 hover:bg-amber-50 hover:text-amber-600 transition"}`}>
                                             <List size={16} />
                                         </button>
                                     </div>
@@ -111,8 +132,8 @@ const ProductsPage = async ({ searchParams }) => {
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
-                            {filteredProducts.map((product) => <ProductCard key={product.id} product={product} />)}
+                        <div className={`grid ${isGrid ? "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5" : "grid-cols-1 gap-5"} `}>
+                            {filteredProducts.map((product) => <ProductCard key={product.id} product={product}  />)}
                         </div>
 
                         {filteredProducts.length === 0 && (

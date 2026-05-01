@@ -10,6 +10,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Topics
 - Remote image
+- Filter By Category
 
 First, run the development server:
 
