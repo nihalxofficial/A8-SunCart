@@ -13,14 +13,13 @@ const HeroBanner = () => {
 
                     <div className="flex-1 space-y-6 text-center lg:text-left">
                         <div className="inline-flex items-center gap-2 bg-linear-to-r from-amber-500 to-yellow-500 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-md mx-auto lg:mx-0">
-                            <Star size={16} className="fill-white" />
-                            <span>Limited Time Offer</span>
+                            <span>🔥 Hot Deals</span>
                         </div>
 
                         <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                            <span className="text-sky-600">Shop Smart,</span>
+                            <span className="text-sky-600">Summer Sale</span>
                             <br />
-                            <span className="text-amber-700">Live Bright</span>
+                            <span className="text-amber-700">50% OFF</span>
                             <span className="text-amber-500">!</span>
                         </h1>
 
@@ -62,7 +61,7 @@ const HeroBanner = () => {
                                 href="/products"
                                 className="bg-transparent border-2 border-amber-500 text-amber-600 hover:bg-amber-50 font-semibold px-6 sm:px-8 py-3 rounded-lg transition duration-200 flex items-center justify-center gap-2"
                             >
-                                View Offers
+                                View deals 🔥
                             </Link>
                         </div>
                     </div>
@@ -89,7 +88,7 @@ const HeroBanner = () => {
                         <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 bg-white rounded-xl shadow-lg p-2 sm:p-3 border-l-4 border-sky-500 transform rotate-[-5deg] hover:rotate-0 transition">
                             <p className="text-xs text-stone-500">Today&apos;s Deal</p>
                             <p className="text-lg sm:text-xl font-bold bg-linear-to-r from-sky-600 to-cyan-500 bg-clip-text text-transparent">
-                                30% OFF
+                                50% OFF
                             </p>
                         </div>
 

@@ -16,7 +16,7 @@ const PopularProduct = async () => {
   const res = await fetch("http://localhost:3000/products.json");
 //   const res = await fetch("https://a8-suncart-pi.vercel.app/products.json");
   const data = await res.json();
-  const popularProducts = data.slice(0, 8);
+  const popularProducts = data.slice(0, 4);
   
   return (
     <section className="py-12 md:py-16 bg-gradient-to-b from-amber-50/20 to-white">
