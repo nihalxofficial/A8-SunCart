@@ -13,7 +13,8 @@ import {
 import ProductCard from '../Shared/ProductCard';
 
 const PopularProduct = async () => {
-  const res = await fetch("https://a8-suncart-pi.vercel.app/products.json");
+  const res = await fetch("http://localhost:3000/products.json");
+//   const res = await fetch("https://a8-suncart-pi.vercel.app/products.json");
   const data = await res.json();
   const popularProducts = data.slice(0, 8);
   

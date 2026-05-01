@@ -17,7 +17,7 @@ const ProductCard = ({product, popularSale}) => {
                       src={product.image}
                       alt={product.name}
                       fill
-                      className="object-cover group-hover:scale-105 transition duration-500"
+                      className="object-cover group-hover:scale-105 transition duration-500 border-b-2 border-gray-100 shadow-sm"
                       sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 25vw"
                     />
                   </div>
