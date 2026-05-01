@@ -1,0 +1,222 @@
+[
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Stylish UV protection sunglasses perfect for summer outings.",
+    "image": "https://images.unsplash.com/photo-1511499767150-a48a237f0083",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Beach Hat",
+    "brand": "OceanWear",
+    "price": 12,
+    "rating": 4.5,
+    "stock": 25,
+    "description": "Wide brim beach hat for sun protection.",
+    "image": "https://images.unsplash.com/photo-1520903920243-00d872a2d1c9",
+    "category": "Accessories"
+  },
+  {
+    "id": 3,
+    "name": "Flip Flops",
+    "brand": "ComfortStep",
+    "price": 8,
+    "rating": 4.3,
+    "stock": 40,
+    "description": "Lightweight and comfortable flip flops.",
+    "image": "https://images.unsplash.com/photo-1596461404969-9ae70f2830c1",
+    "category": "Footwear"
+  },
+  {
+    "id": 4,
+    "name": "Portable Fan",
+    "brand": "CoolBreeze",
+    "price": 20,
+    "rating": 4.6,
+    "stock": 15,
+    "description": "Rechargeable handheld fan for hot days.",
+    "image": "https://images.unsplash.com/photo-1599058917212-d750089bc07e",
+    "category": "Electronics"
+  },
+  {
+    "id": 5,
+    "name": "Water Bottle",
+    "brand": "HydroMax",
+    "price": 10,
+    "rating": 4.8,
+    "stock": 30,
+    "description": "Insulated water bottle to keep drinks cold.",
+    "image": "https://images.unsplash.com/photo-1526401485004-2fda9f3c3a3b",
+    "category": "Essentials"
+  },
+  {
+    "id": 6,
+    "name": "Sunscreen SPF 50",
+    "brand": "SunGuard",
+    "price": 14,
+    "rating": 4.9,
+    "stock": 20,
+    "description": "High protection sunscreen for all skin types.",
+    "image": "https://images.unsplash.com/photo-1596464716127-f2a82984de30",
+    "category": "Skincare"
+  },
+  {
+    "id": 7,
+    "name": "Swimming Goggles",
+    "brand": "AquaVision",
+    "price": 11,
+    "rating": 4.4,
+    "stock": 18,
+    "description": "Anti-fog swimming goggles.",
+    "image": "https://images.unsplash.com/photo-1560090995-01632a28895b",
+    "category": "Sports"
+  },
+  {
+    "id": 8,
+    "name": "Beach Towel",
+    "brand": "SoftWave",
+    "price": 18,
+    "rating": 4.6,
+    "stock": 22,
+    "description": "Large and soft beach towel.",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+    "category": "Accessories"
+  },
+  {
+    "id": 9,
+    "name": "Cooler Box",
+    "brand": "ChillMate",
+    "price": 35,
+    "rating": 4.7,
+    "stock": 12,
+    "description": "Keeps drinks and food cold for hours.",
+    "image": "https://images.unsplash.com/photo-1566837945700-30057527ade0",
+    "category": "Outdoor"
+  },
+  {
+    "id": 10,
+    "name": "Swimming Shorts",
+    "brand": "WaveStyle",
+    "price": 16,
+    "rating": 4.5,
+    "stock": 28,
+    "description": "Quick-dry swimming shorts.",
+    "image": "https://images.unsplash.com/photo-1520975922284-9b6c1dc1d8f6",
+    "category": "Clothing"
+  },
+  {
+    "id": 11,
+    "name": "Ice Cream Maker",
+    "brand": "SweetFreeze",
+    "price": 45,
+    "rating": 4.8,
+    "stock": 10,
+    "description": "Make homemade ice cream easily.",
+    "image": "https://images.unsplash.com/photo-1563805042-7684c019e1cb",
+    "category": "Appliances"
+  },
+  {
+    "id": 12,
+    "name": "Sun Umbrella",
+    "brand": "ShadePro",
+    "price": 25,
+    "rating": 4.4,
+    "stock": 14,
+    "description": "Portable umbrella for beach or outdoor use.",
+    "image": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e",
+    "category": "Outdoor"
+  },
+  {
+    "id": 13,
+    "name": "Lemonade Bottle",
+    "brand": "FreshSip",
+    "price": 6,
+    "rating": 4.3,
+    "stock": 50,
+    "description": "Refreshing summer lemonade drink.",
+    "image": "https://images.unsplash.com/photo-1527169402691-a68e4c9fef8a",
+    "category": "Beverages"
+  },
+  {
+    "id": 14,
+    "name": "Camping Chair",
+    "brand": "RelaxSeat",
+    "price": 22,
+    "rating": 4.6,
+    "stock": 16,
+    "description": "Foldable chair for outdoor relaxation.",
+    "image": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4",
+    "category": "Outdoor"
+  },
+  {
+    "id": 15,
+    "name": "Bluetooth Speaker",
+    "brand": "SoundWave",
+    "price": 30,
+    "rating": 4.7,
+    "stock": 19,
+    "description": "Portable speaker with powerful sound.",
+    "image": "https://images.unsplash.com/photo-1518441902110-5bdcbf3f7b63",
+    "category": "Electronics"
+  },
+  {
+    "id": 16,
+    "name": "Picnic Basket",
+    "brand": "NatureCarry",
+    "price": 27,
+    "rating": 4.5,
+    "stock": 13,
+    "description": "Classic basket for picnics.",
+    "image": "https://images.unsplash.com/photo-1505253216365-5c4db9c1a1f0",
+    "category": "Outdoor"
+  },
+  {
+    "id": 17,
+    "name": "Aloe Vera Gel",
+    "brand": "SkinRelief",
+    "price": 9,
+    "rating": 4.8,
+    "stock": 26,
+    "description": "Soothing gel for sunburn relief.",
+    "image": "https://images.unsplash.com/photo-1596464716127-f2a82984de30",
+    "category": "Skincare"
+  },
+  {
+    "id": 18,
+    "name": "Inflatable Pool",
+    "brand": "AquaFun",
+    "price": 40,
+    "rating": 4.6,
+    "stock": 9,
+    "description": "Easy setup inflatable pool for home.",
+    "image": "https://images.unsplash.com/photo-1560185127-6ed189bf02f4",
+    "category": "Outdoor"
+  },
+  {
+    "id": 19,
+    "name": "Cap Hat",
+    "brand": "UrbanCool",
+    "price": 11,
+    "rating": 4.3,
+    "stock": 35,
+    "description": "Casual cap for sunny days.",
+    "image": "https://images.unsplash.com/photo-1516822003754-cca485356ecb",
+    "category": "Accessories"
+  },
+  {
+    "id": 20,
+    "name": "Travel Backpack",
+    "brand": "PackGo",
+    "price": 32,
+    "rating": 4.7,
+    "stock": 17,
+    "description": "Lightweight backpack for summer trips.",
+    "image": "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee",
+    "category": "Bags"
+  }
+]

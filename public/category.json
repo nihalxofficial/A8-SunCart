@@ -1,0 +1,13 @@
+[
+    { "id": 1, "name": "Accessories" },
+    { "id": 2, "name": "Footwear" },
+    { "id": 3, "name": "Electronics" },
+    { "id": 4, "name": "Essentials" },
+    { "id": 5, "name": "Skincare" },
+    { "id": 6, "name": "Sports" },
+    { "id": 7, "name": "Outdoor" },
+    { "id": 8, "name": "Clothing" },
+    { "id": 9, "name": "Appliances" },
+    { "id": 10, "name": "Beverages" },
+    { "id": 11, "name": "Bags" }
+  ]
