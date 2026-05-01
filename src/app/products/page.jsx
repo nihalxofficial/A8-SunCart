@@ -6,10 +6,10 @@ import ProductCard from '@/components/Shared/ProductCard';
 const ProductsPage = async ({ searchParams }) => {
     const { category } = await searchParams;
 
-    const res = await fetch("https://a8-suncart-pi.vercel.app/products.json");
+    const res = await fetch("http://localhost:3000//products.json");
     const products = await res.json();
 
-    const catRes = await fetch("https://a8-suncart-pi.vercel.app/category.json");
+    const catRes = await fetch("http://localhost:3000//category.json");
     const categories = await catRes.json();
 
     const filteredProducts = category ? products.filter(product => product.category.toLowerCase() === category.toLowerCase()) : products;
@@ -48,25 +48,28 @@ const ProductsPage = async ({ searchParams }) => {
                             <div className="p-3">
                                 <Link
                                     href="/products"
-                                    className="flex items-center justify-between px-3 py-2.5 rounded-lg bg-linear-to-r from-sky-500 to-cyan-400 text-white font-medium text-sm mb-1 shadow-sm"
+                                    className={`flex  items-center justify-between px-3 py-2.5 rounded-lg bg-linear-to-r ${!category ? "from-sky-500 to-cyan-400 text-white font-semibold" : "hover:bg-amber-50 text-stone-600 hover:text-sky-600 text-sm transition group"} `}
                                 >
-                                    <span>All Products</span>
-                                    <span className="text-xs bg-white/20 px-1.5 py-0.5 rounded-full">{products.length}</span>
+                                    <span className="flex items-center gap-2">
+                                        <ChevronRight size={12} className="opacity-0 group-hover:opacity-100 transition text-amber-500" />
+                                        All Products
+                                    </span>
+                                    <span className="text-xs pl-5  py-0.5 rounded-full">{products.length}</span>
                                 </Link>
 
-                                {categories.map((category) => {
-                                    const productCount = products.filter(p => p.category === category.name).length;
+                                {categories.map((cat) => {
+                                    const productCount = products.filter(p => p.category === cat.name).length;
                                     return (
                                         <Link
-                                            key={category.id}
-                                            href={`/products?category=${category.name.toLowerCase()}`}
-                                            className="flex items-center justify-between px-3 py-2 rounded-lg hover:bg-amber-50 text-stone-600 hover:text-sky-600 text-sm transition group"
+                                            key={cat.id}
+                                            href={`/products?category=${cat.name.toLowerCase()}`}
+                                            className={`flex items-center justify-between px-3 py-2 rounded-lg bg-linear-to-r ${category?.toLowerCase() === cat.name.toLowerCase() ? "from-sky-500 to-cyan-400 text-white font-semibold" : "hover:bg-amber-50 text-stone-600 hover:text-sky-600 text-sm transition group"}`}
                                         >
                                             <span className="flex items-center gap-2">
                                                 <ChevronRight size={12} className="opacity-0 group-hover:opacity-100 transition text-amber-500" />
-                                                {category.name}
+                                                {cat.name}
                                             </span>
-                                            <span className="text-xs text-stone-400 group-hover:text-sky-500">{productCount}</span>
+                                            <span className="text-xs group-hover:text-sky-500">{productCount}</span>
                                         </Link>
                                     );
                                 })}
