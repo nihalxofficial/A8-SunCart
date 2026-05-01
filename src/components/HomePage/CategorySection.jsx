@@ -11,12 +11,11 @@ const CategorySection = async () => {
   const categories = await res.json();
   
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-b from-white to-amber-50/30">
+    <section className="py-12 md:py-16 bg-linear-to-b from-white to-amber-50/30">
       <div className="w-11/12 mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
         <div className="text-center mb-10 md:mb-12">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500 to-cyan-400 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-md mb-4">
+          <div className="inline-flex items-center gap-2 bg-linear-to-r from-sky-500 to-cyan-400 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-md mb-4">
             <Sparkles size={16} className="fill-white" />
             <span>Shop by Category</span>
           </div>
@@ -25,14 +24,12 @@ const CategorySection = async () => {
             <span className="text-amber-600"> Categories</span>
           </h2>
           <p className="text-stone-600 mt-3 max-w-2xl mx-auto">
-            Find exactly what you're looking for in our curated categories
+            Find exactly what you&apos;re looking for in our curated categories
           </p>
         </div>
 
-        {/* Categories Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6">
           {categories.map((category) => {
-            // Get icon and color based on category name
             let IconComponent = Package;
             let gradientColor = "from-sky-500 to-cyan-400";
             
