@@ -1,12 +1,11 @@
 import HeroBanner from "@/components/HomePage/Banner";
-import Banner from "@/components/HomePage/Banner";
-import Image from "next/image";
+import SummerProducts from "@/components/Promotion";
 
 export default function Home() {
   return (
     <div>
-      {/* <Banner/> */}
       <HeroBanner/>
+      {/* <SummerProducts/> */}
     </div>
   );
 }
