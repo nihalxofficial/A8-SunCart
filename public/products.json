@@ -16,7 +16,7 @@
     "brand": "OceanWear",
     "price": 12,
     "rating": 4.5,
-    "stock": 25,
+    "stock": 7,
     "description": "Wide brim beach hat for sun protection.",
     "image": "https://i5.walmartimages.com/asr/f9578601-36d7-4248-8c67-7a5ba4106148.86bc6ec6b6beae726f7ee74d29fd9f44.jpeg",
     "category": "Accessories"
@@ -38,7 +38,7 @@
     "brand": "CoolBreeze",
     "price": 20,
     "rating": 4.6,
-    "stock": 8,
+    "stock": 16,
     "description": "Rechargeable handheld fan for hot days.",
     "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb6AarvRdrREtlm7oFYOn9UinhCBXV6XRZUA&s",
     "category": "Electronics"

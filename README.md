@@ -3,9 +3,13 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## Getting Started
 
 ## Tech Stack 
+- Tailwind Css
 - Lucide React
 - React Icons
 - Gravity Ui Icons
+
+## Topics
+- Remote image
 
 First, run the development server:
 

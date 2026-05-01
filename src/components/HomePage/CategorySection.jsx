@@ -7,7 +7,8 @@ import {
 } from 'lucide-react';
 
 const CategorySection = async () => {
-  const res = await fetch("https://a8-suncart-pi.vercel.app/category.json");
+  // const res = await fetch("https://a8-suncart-pi.vercel.app/category.json");
+  const res = await fetch("http://localhost:3000/category.json");
   const categories = await res.json();
   
   return (
