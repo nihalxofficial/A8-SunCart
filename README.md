@@ -5,6 +5,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## Tech Stack 
 - Lucide React
 - React Icons
+- Gravity Ui Icons
 
 First, run the development server:
 
