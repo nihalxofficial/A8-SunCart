@@ -17,9 +17,9 @@ import {
   AlertCircle,
   Calendar
 } from 'lucide-react';
-import { UpdateUserModal } from '@/components/UpdateUserModal';
+import { UpdateUserModal } from '@/components/ProfilePage/UpdateUserModal';
 import { Button } from '@heroui/react';
-import DeleteUserModal from '@/components/DeleteUserModal';
+import DeleteUserModal from '@/components/ProfilePage/DeleteUserModal';
 
 const ProfilePage = () => {
   const [user, setUser] = useState({

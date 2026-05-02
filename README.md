@@ -7,6 +7,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 - Lucide React
 - React Icons
 - Gravity Ui Icons
+- HeroUI
+- Next.js
 
 ## Topics
 - Remote image
