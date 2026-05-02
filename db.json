@@ -1,0 +1,237 @@
+{
+    "products": [
+  {
+    "id": 1,
+    "name": "UV Protection Sunglasses",
+    "brand": "SunShade",
+    "price": 15,
+    "rating": 4.7,
+    "stock": 10,
+    "description": "Stylish UV protection sunglasses perfect for summer outings.",
+    "image": "https://img.drz.lazcdn.com/static/bd/p/ace370bb9c6c59dfc0afe5afba29d060.jpg_720x720q80.jpg",
+    "category": "Accessories"
+  },
+  {
+    "id": 2,
+    "name": "Beach Hat",
+    "brand": "OceanWear",
+    "price": 12,
+    "rating": 4.5,
+    "stock": 7,
+    "description": "Wide brim beach hat for sun protection.",
+    "image": "https://i5.walmartimages.com/asr/f9578601-36d7-4248-8c67-7a5ba4106148.86bc6ec6b6beae726f7ee74d29fd9f44.jpeg",
+    "category": "Accessories"
+  },
+  {
+    "id": 3,
+    "name": "Flip Flops",
+    "brand": "ComfortStep",
+    "price": 8,
+    "rating": 4.3,
+    "stock": 40,
+    "description": "Lightweight and comfortable flip flops.",
+    "image": "https://www.wavesflipflops.co.uk/wp-content/uploads/2020/06/products-MSP_9925-scaled.jpg",
+    "category": "Footwear"
+  },
+  {
+    "id": 4,
+    "name": "Portable Fan",
+    "brand": "CoolBreeze",
+    "price": 20,
+    "rating": 4.6,
+    "stock": 16,
+    "description": "Rechargeable handheld fan for hot days.",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb6AarvRdrREtlm7oFYOn9UinhCBXV6XRZUA&s",
+    "category": "Electronics"
+  },
+  {
+    "id": 5,
+    "name": "Water Bottle",
+    "brand": "HydroMax",
+    "price": 10,
+    "rating": 4.8,
+    "stock": 30,
+    "description": "Insulated water bottle to keep drinks cold.",
+    "image": "https://cdn.promoshop.hr/product/image/1782230/raise-sports-bottle-light-grey.webp",
+    "category": "Essentials"
+  },
+  {
+    "id": 6,
+    "name": "Sunscreen SPF 50",
+    "brand": "SunGuard",
+    "price": 14,
+    "rating": 4.9,
+    "stock": 20,
+    "description": "High protection sunscreen for all skin types.",
+    "image": "https://euadmin.eurasiasupplies.com//storage/images//product/normal-lBuQr1mZw9oeuWLU6A6McIUDvXp2pe.jpg",
+    "category": "Skincare"
+  },
+  {
+    "id": 7,
+    "name": "Swimming Goggles",
+    "brand": "AquaVision",
+    "price": 11,
+    "rating": 4.4,
+    "stock": 18,
+    "description": "Anti-fog swimming goggles.",
+    "image": "https://cdn.othoba.com/images/thumbs/0779420_swim-goggle-speedo-multi-color.jpeg",
+    "category": "Sports"
+  },
+  {
+    "id": 8,
+    "name": "Beach Towel",
+    "brand": "SoftWave",
+    "price": 18,
+    "rating": 4.6,
+    "stock": 22,
+    "description": "Large and soft beach towel.",
+    "image": "https://www.vipshopboutic.com/cdn/shop/files/182_643.jpg?v=1717574060",
+    "category": "Accessories"
+  },
+  {
+    "id": 9,
+    "name": "Cooler Box",
+    "brand": "ChillMate",
+    "price": 35,
+    "rating": 4.7,
+    "stock": 12,
+    "description": "Keeps drinks and food cold for hours.",
+    "image": "https://s.alicdn.com/@sc04/kf/H326dc47223304e068faca8ece3fc8177g/5L-8L-13L-26L-Portable-Outdoor-Ice-Pack-Insulated-Container-BBQ-Food-Car-Plastic-Ice-Box-Ice-Chest-Cooler-Boxes.jpg",
+    "category": "Outdoor"
+  },
+  {
+    "id": 10,
+    "name": "Swimming Shorts",
+    "brand": "WaveStyle",
+    "price": 16,
+    "rating": 4.5,
+    "stock": 28,
+    "description": "Quick-dry swimming shorts.",
+    "image": "https://img01.ztat.net/article/spp-media-p1/935543df169b453187ffaf8b00cac667/d57afe33aab04031a818fd521995fc7e.jpg?imwidth=762&filter=packshot",
+    "category": "Clothing"
+  },
+  {
+    "id": 11,
+    "name": "Ice Cream Maker",
+    "brand": "SweetFreeze",
+    "price": 45,
+    "rating": 4.8,
+    "stock": 10,
+    "description": "Make homemade ice cream easily.",
+    "image": "https://www.cuisinart.co.uk/on/demandware.static/-/Sites-master-uk/default/dw74ad8801/cuisinart/ICE48U/ICE48U%20Image%201.jpg",
+    "category": "Appliances"
+  },
+  {
+    "id": 12,
+    "name": "Sun Umbrella",
+    "brand": "ShadePro",
+    "price": 25,
+    "rating": 4.4,
+    "stock": 14,
+    "description": "Portable umbrella for beach or outdoor use.",
+    "image": "https://m.media-amazon.com/images/I/31dUIkBRkoS.jpg",
+    "category": "Outdoor"
+  },
+  {
+    "id": 13,
+    "name": "Lemonade Bottle",
+    "brand": "FreshSip",
+    "price": 6,
+    "rating": 4.3,
+    "stock": 50,
+    "description": "Refreshing summer lemonade drink.",
+    "image": "https://www.manhafoods.co.uk/cdn/shop/files/56.png?v=1733988252&width=1946",
+    "category": "Beverages"
+  },
+  {
+    "id": 14,
+    "name": "Camping Chair",
+    "brand": "RelaxSeat",
+    "price": 22,
+    "rating": 4.6,
+    "stock": 16,
+    "description": "Foldable chair for outdoor relaxation.",
+    "image": "https://www.iceland-camping-equipment.com/cdn/shop/products/Iceland-camping-chair.jpg?v=1426776142&width=2048",
+    "category": "Outdoor"
+  },
+  {
+    "id": 15,
+    "name": "Bluetooth Speaker",
+    "brand": "SoundWave",
+    "price": 30,
+    "rating": 4.7,
+    "stock": 19,
+    "description": "Portable speaker with powerful sound.",
+    "image": "https://sourceofproduct.com/wp-content/uploads/2025/04/Anker-Soundcore-Glow.webp",
+    "category": "Electronics"
+  },
+  {
+    "id": 16,
+    "name": "Picnic Basket",
+    "brand": "NatureCarry",
+    "price": 27,
+    "rating": 4.5,
+    "stock": 13,
+    "description": "Classic basket for picnics.",
+    "image": "https://img.drz.lazcdn.com/static/bd/p/368b2e76c4e4974bc1d79aaba79bb8c7.jpg_720x720q80.jpg",
+    "category": "Outdoor"
+  },
+  {
+    "id": 17,
+    "name": "Aloe Vera Gel",
+    "brand": "SkinRelief",
+    "price": 9,
+    "rating": 4.8,
+    "stock": 26,
+    "description": "Soothing gel for sunburn relief.",
+    "image": "https://qvc.scene7.com/is/image/QVC/u2/2/65/247365.001",
+    "category": "Skincare"
+  },
+  {
+    "id": 18,
+    "name": "Inflatable Pool",
+    "brand": "AquaFun",
+    "price": 40,
+    "rating": 4.6,
+    "stock": 9,
+    "description": "Easy setup inflatable pool for home.",
+    "image": "https://www.123ink.ie/image/Bestway_Fast_Set_inflatable_pool_including_filter_pump_%C3%98_305cm_57270_SBE00008_m1_big.jpg",
+    "category": "Outdoor"
+  },
+  {
+    "id": 19,
+    "name": "Cap Hat",
+    "brand": "UrbanCool",
+    "price": 11,
+    "rating": 4.3,
+    "stock": 35,
+    "description": "Casual cap for sunny days.",
+    "image": "https://image.made-in-china.com/365f3j00dmqPMeAIPboH/100-Cotton-Plain-Sports-Dad-Hats-Blank-Fitted-6-Panel-Baseball-Caps-for-Adults.webp",
+    "category": "Accessories"
+  },
+  {
+    "id": 20,
+    "name": "Travel Backpack",
+    "brand": "PackGo",
+    "price": 32,
+    "rating": 4.7,
+    "stock": 17,
+    "description": "Lightweight backpack for summer trips.",
+    "image": "https://airdeal.com.bd/images/thumbs/0006370_mark-ryden-mr9299-17-expandable-business-travel-laptop-bag_625.jpeg",
+    "category": "Bags"
+  }
+],
+"category": [
+    { "id": 1, "name": "Accessories" },
+    { "id": 2, "name": "Footwear" },
+    { "id": 3, "name": "Electronics" },
+    { "id": 4, "name": "Essentials" },
+    { "id": 5, "name": "Skincare" },
+    { "id": 6, "name": "Sports" },
+    { "id": 7, "name": "Outdoor" },
+    { "id": 8, "name": "Clothing" },
+    { "id": 9, "name": "Appliances" },
+    { "id": 10, "name": "Beverages" },
+    { "id": 11, "name": "Bags" }
+  ]
+}

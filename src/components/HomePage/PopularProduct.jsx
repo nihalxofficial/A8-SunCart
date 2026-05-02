@@ -11,20 +11,18 @@ import {
   Sparkles
 } from 'lucide-react';
 import ProductCard from '../Shared/ProductCard';
+import { getProducts } from '@/lib/data';
 
 const PopularProduct = async () => {
-  const res = await fetch("http://localhost:3000/products.json");
-//   const res = await fetch("https://a8-suncart-pi.vercel.app/products.json");
-  const data = await res.json();
-  const popularProducts = data.slice(0, 4);
+  const products = await getProducts();
+  const popularProducts = products.slice(0, 4);
   
   return (
-    <section className="py-12 md:py-16 bg-gradient-to-b from-amber-50/20 to-white">
+    <section className="py-12 md:py-16 bg-linear-to-b from-amber-50/20 to-white">
       <div className="w-11/12 mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Section Header */}
         <div className="text-center mb-10 md:mb-12">
-          <div className="inline-flex items-center gap-2 bg-gradient-to-r from-sky-500 to-cyan-400 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-md mb-4">
+          <div className="inline-flex items-center gap-2 bg-linear-to-r from-sky-500 to-cyan-400 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-md mb-4">
             <Sparkles size={16} className="fill-white" />
             <span>Customer Favorites</span>
           </div>
@@ -37,12 +35,10 @@ const PopularProduct = async () => {
           </p>
         </div>
 
-        {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
           {popularProducts.map((product, index) => <ProductCard key={index} product={product} popularSale={true}></ProductCard>)}
         </div>
 
-        {/* View All Button */}
         <div className="text-center">
           <Link
             href="/products"

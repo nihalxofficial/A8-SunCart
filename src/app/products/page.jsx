@@ -2,15 +2,14 @@ import React from 'react';
 import Link from 'next/link';
 import { ChevronRight, Filter, Grid3x3, List } from 'lucide-react';
 import ProductCard from '@/components/Shared/ProductCard';
+import { getCategories, getProducts } from '@/lib/data';
 
 const ProductsPage = async ({ searchParams }) => {
     const { category } = await searchParams;
 
-    const res = await fetch("http://localhost:3000//products.json");
-    const products = await res.json();
+    const products = await getProducts();
+    const categories = await getCategories();
 
-    const catRes = await fetch("http://localhost:3000//category.json");
-    const categories = await catRes.json();
 
     const filteredProducts = category ? products.filter(product => product.category.toLowerCase() === category.toLowerCase()) : products;
 

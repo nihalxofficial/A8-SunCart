@@ -19,22 +19,19 @@ import {
     ArrowLeft
 } from 'lucide-react';
 import ProductNotFound from '@/components/ProductNotFound';
+import { getProducts } from '@/lib/data';
 
 const ProductDetailsPage = async ({ params }) => {
     const { id } = await params;
-    const res = await fetch("http://localhost:3000/products.json");
-    const products = await res.json();
-
-
-    const product = products.find(product => product.id===Number(id));
+    const products = await getProducts();
+    
+    const product = products.find(product =>Number(product.id)===Number(id));
 
     if (!product) {
         return <ProductNotFound/>
     }
 
-    const relatedRes = await fetch("http://localhost:3000/products.json");
-    const allProducts = await relatedRes.json();
-    const relatedProducts = allProducts.filter(p => p.category === product.category && p.id !== product.id).slice(0, 4);
+    const relatedProducts = products.filter(p => p.category === product.category && p.id !== product.id).slice(0, 4);
 
     return (
         <div className="bg-linear-to-b from-white to-amber-50/20 min-h-screen">

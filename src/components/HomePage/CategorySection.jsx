@@ -5,11 +5,11 @@ import {
   Bike, Mountain, Shirt, Coffee, 
   ArrowRight, Package, Gem, Droplet, Watch
 } from 'lucide-react';
+import { getCategories } from '@/lib/data';
 
 const CategorySection = async () => {
-  // const res = await fetch("https://a8-suncart-pi.vercel.app/category.json");
-  const res = await fetch("http://localhost:3000/category.json");
-  const categories = await res.json();
+
+  const categories = await getCategories();
   
   return (
     <section className="py-12 md:py-16 bg-linear-to-b from-white to-amber-50/30">

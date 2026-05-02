@@ -9,6 +9,9 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 - Gravity Ui Icons
 - HeroUI
 - Next.js
+- Json Server
+- Render (Server Side)
+- Vercel (Client Side)
 
 ## Topics
 - Remote image
