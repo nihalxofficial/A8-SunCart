@@ -10,6 +10,10 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 - HeroUI
 - Next.js
 - Json Server
+- MongoDB
+- Better Auth
+- MongoDB Atlas
+- MongoDB Adapter
 - Render (Server Side)
 - Vercel (Client Side)
 
