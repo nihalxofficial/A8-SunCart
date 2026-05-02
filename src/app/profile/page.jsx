@@ -19,6 +19,7 @@ import {
 } from 'lucide-react';
 import { UpdateUserModal } from '@/components/UpdateUserModal';
 import { Button } from '@heroui/react';
+import DeleteUserModal from '@/components/DeleteUserModal';
 
 const ProfilePage = () => {
   const [user, setUser] = useState({
@@ -124,12 +125,7 @@ const ProfilePage = () => {
 
               <div className="flex flex-col sm:flex-row gap-3 mt-6 pt-4 border-t border-stone-100">
                 <UpdateUserModal/>
-                <Button
-                  className="flex-1 cursor-pointer bg-white border-2 border-rose-500 text-rose-500 hover:bg-rose-500 hover:text-white font-semibold py-2.5 rounded-xl transition flex items-center justify-center gap-2"
-                >
-                  <Trash2 size={16} />
-                  Delete Account
-                </Button>
+                <DeleteUserModal/>
               </div>
 
               <div className="flex justify-center gap-6 mt-6 pt-4 border-t border-stone-100">

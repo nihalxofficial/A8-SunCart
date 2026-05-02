@@ -23,7 +23,7 @@ export function UpdateUserModal({ user }) {
     return (
         <Modal>
             <Button
-                className="flex-1 cursor-pointer bg-gradient-to-r from-sky-500 to-cyan-400 hover:from-sky-600 hover:to-cyan-500 text-white font-semibold py-2.5 rounded-xl transition shadow-md hover:shadow-lg flex items-center justify-center gap-2"
+                className="flex-1 cursor-pointer bg-linear-to-r from-sky-500 to-cyan-400 hover:from-sky-600 hover:to-cyan-500 text-white font-semibold py-2.5 rounded-xl transition shadow-md hover:shadow-lg flex items-center justify-center gap-2"
             >
                 <Edit size={16} />
                 Update Profile
@@ -33,16 +33,18 @@ export function UpdateUserModal({ user }) {
                     <Modal.Dialog className="sm:max-w-md">
                         <Modal.CloseTrigger />
                         <Modal.Header>
-                            <Modal.Icon className="bg-accent-soft text-accent-soft-foreground">
-                                <BiUser className="size-5" />
-                            </Modal.Icon>
-                            <Modal.Heading>Update User</Modal.Heading>
+                            <div className="flex justify-center items-center">
+                                <Modal.Icon className="bg-accent-soft text-accent-soft-foreground">
+                                    <BiUser className="size-8" />
+                                </Modal.Icon>
+                            </div>
+                            <Modal.Heading className="text-center text-xl font-bold">Update User</Modal.Heading>
                         </Modal.Header>
                         <Modal.Body className="p-6">
                             <Surface variant="default">
-                                <form 
-                                // onSubmit={onSubmit}
-                                 className="flex flex-col gap-4">
+                                <form
+                                    // onSubmit={onSubmit}
+                                    className="flex flex-col gap-4">
                                     <TextField className="w-full" name="name" type="text">
                                         <Label>Name</Label>
                                         <Input placeholder="Enter your name" />
