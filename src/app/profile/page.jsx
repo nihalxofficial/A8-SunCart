@@ -1,4 +1,4 @@
-
+"use client"
 import Link from 'next/link';
 import Image from 'next/image';
 import {
@@ -13,17 +13,25 @@ import {
 } from 'lucide-react';
 import { UpdateUserModal } from '@/components/ProfilePage/UpdateUserModal';
 import DeleteUserModal from '@/components/ProfilePage/DeleteUserModal';
-import { redirect } from 'next/navigation';
+import { useRouter } from 'next/navigation';
 import { authClient } from '@/lib/auth-client';
-import { auth } from '@/lib/auth';
-import { headers } from 'next/headers';
 
-const ProfilePage = async () => {
+const ProfilePage = () => {
+  const router = useRouter();
 
-  const session = await auth.api.getSession({
-    headers: await headers(),
-  });
+  const { data: session, isPending } = authClient.useSession()
   const user = session?.user;
+
+  const handleSignOut = async () => {
+          await authClient.signOut({
+              fetchOptions: {
+                  onSuccess: () => {
+                      router.push("/signin");
+                  },
+              },
+          });
+  
+      }
 
 
   return (
@@ -110,7 +118,7 @@ const ProfilePage = async () => {
                 <Link href="/settings" className="text-xs text-stone-500 hover:text-sky-600 transition flex items-center gap-1">
                   <Settings size={12} /> Settings
                 </Link>
-                <button className="text-xs cursor-pointer text-stone-500 hover:text-rose-500 transition flex items-center gap-1">
+                <button onClick={handleSignOut} className="text-xs cursor-pointer text-stone-500 hover:text-rose-500 transition flex items-center gap-1">
                   <LogOut size={12} /> LogOut
                 </button>
               </div>
