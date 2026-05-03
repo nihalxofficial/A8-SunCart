@@ -79,7 +79,7 @@ const Navbar = () => {
                         <div className='hidden md:flex items-center gap-4'>
                             <div className="relative group">
                                 <div className="absolute -inset-0.5 bg-linear-to-r from-sky-500 to-amber-500 rounded-full opacity-75 group-hover:opacity-100 transition duration-300 blur"></div>
-                                <Avatar className="relative">
+                                <Avatar className="relative cursor-pointer" onClick={()=>{router.push("/profile")}}>
                                     <Avatar.Image
                                         alt={user?.name || "User"}
                                         src={user?.image}
@@ -131,7 +131,7 @@ const Navbar = () => {
                             <div className='flex justify-between items-center gap-2'>
                                 <div className="relative group">
                                     <div className="absolute -inset-0.5 bg-linear-to-r from-sky-500 to-amber-500 rounded-full opacity-75 group-hover:opacity-100 transition duration-300 blur"></div>
-                                    <Avatar className="relative">
+                                    <Avatar className="relative cursor-pointer" onClick={()=>{router.push("/profile")}}>
                                         <Avatar.Image
                                             alt={user?.name || "User"}
                                             src={user?.image}

@@ -25,6 +25,9 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 - Social Login
 - MetaData
 - Protected Routes (Proxy)
+- Update User
+- Delete User
+- Google Font
 
 First, run the development server:
 

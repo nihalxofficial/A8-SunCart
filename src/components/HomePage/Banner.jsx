@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { ArrowRight, ShoppingBag, Star, Truck, Shield, Clock } from 'lucide-react';
 import heroImg from "@/assets/hero.png"
+import { pacifico } from '@/lib/font';
 
 const HeroBanner = () => {
     return (
@@ -17,7 +18,7 @@ const HeroBanner = () => {
                         </div>
 
                         <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
-                            <span className="text-sky-600">Summer Sale</span>
+                            <span className={`text-sky-600 ${pacifico.className}`}>Summer Sale</span>
                             <br />
                             <span className="text-amber-700">50% OFF</span>
                             <span className="text-amber-500">!</span>
