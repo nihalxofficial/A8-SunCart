@@ -45,14 +45,15 @@ const Navbar = () => {
             <FaShoppingBasket className="text-sky-500" />
             Products
         </NavLink>
-        <NavLink
+        {user && <NavLink
             href="/profile"
             className="text-amber-800 hover:text-sky-600 transition font-medium px-2 py-1 flex justify-start md:justify-between items-center gap-2"
             onClick={() => setIsMenuOpen(false)}
         >
             <FaUser className='text-sky-500' />
             My Profile
-        </NavLink>
+        </NavLink>}
+
     </>
 
     return (
