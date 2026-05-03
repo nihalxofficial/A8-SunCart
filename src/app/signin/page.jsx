@@ -2,10 +2,9 @@
 
 import GoogleSignUp from "@/components/GoogleSignUp";
 import { authClient } from "@/lib/auth-client";
-import { User, Mail, Lock, Eye, EyeOff, Check } from "lucide-react";
+import { User, Mail, Eye } from "lucide-react";
 import {
   Button,
-  Description,
   FieldError,
   Form,
   Input,
@@ -18,7 +17,7 @@ import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import { useState } from "react";
 import Image from "next/image";
-import signUpImg from "@/assets/signup.jpg"
+import signInImg from "@/assets/signin.png"
 import { EyeSlash } from "@gravity-ui/icons";
 
 export default function SignUpPage() {
@@ -34,6 +33,7 @@ export default function SignUpPage() {
       email: userData.email,
       password: userData.password,
     });
+    
 
 
     if (data) {
@@ -57,8 +57,8 @@ export default function SignUpPage() {
 
         <div className="hidden md:block md:w-[50%] relative bg-linear-to-br from-stone-800 to-stone-900">
           <Image
-            src={signUpImg}
-            alt="Sign Up"
+            src={signInImg}
+            alt="Sign In"
             width={600}
             height={600}
             className="absolute inset-0 w-full h-full object-cover"
@@ -154,7 +154,7 @@ export default function SignUpPage() {
 
             <div className=" text-center text-[10px] text-stone-600 mt-1">
               Don&apos;t have an account?{" "}
-              <Link href="/signin" className="text-sky-600 hover:text-amber-600 font-semibold">
+              <Link href="/signup" className="text-sky-600 hover:text-amber-600 font-semibold">
                 SignUp here
               </Link>
             </div>
