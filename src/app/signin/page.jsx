@@ -16,8 +16,6 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { toast } from "react-toastify";
 import { useState } from "react";
-import Image from "next/image";
-import signInImg from "@/assets/signin.png"
 import { EyeSlash } from "@gravity-ui/icons";
 import Lottie from "lottie-react";
 import animationData from "@/assets/Login.json";
@@ -64,13 +62,6 @@ export default function SignUpPage() {
             autoplay
             className="object-cover bg-linear-to-r bg-sky-500 via-sky-400 to-sky-300 h-full"
           ></Lottie>
-          {/* <Image
-            src={signInImg}
-            alt="Sign In"
-            width={600}
-            height={600}
-            className="absolute inset-0 w-full h-full object-cover"
-          /> */}
         </div>
 
         <div className="w-full md:w-[50%] p-5 md:p-6">

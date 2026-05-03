@@ -1,10 +1,10 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { ArrowRight, ShoppingBag, Star, Truck, Shield, Clock } from 'lucide-react';
-import heroImg from "@/assets/hero.png"
 import { pacifico } from '@/lib/font';
+import Lottie from "lottie-react";
+import animationData from "@/assets/shopping Ecommerce.json";
 
 const HeroBanner = () => {
     return (
@@ -75,14 +75,20 @@ const HeroBanner = () => {
 
                         <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-112 bg-linear-to-br from-sky-100 to-amber-50 rounded-2xl shadow-2xl overflow-hidden border border-sky-200">
                             <div className="relative w-full h-full flex items-center justify-center">
-                                <Image
+                                {/* <Image
                                     src={heroImg}
                                     alt="Shopping Banner"
                                     fill
                                     className="object-contain p-4 sm:p-6 md:p-8"
                                     priority
                                     sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, (max-width: 1024px) 50vw, 45vw"
-                                />
+                                /> */}
+                                <Lottie
+                                    animationData={animationData}
+                                    loop
+                                    autoplay
+                                    className="object-cover bg-linear-to-r bg-sky-500 via-sky-400 to-sky-300 h-full"
+                                ></Lottie>
                             </div>
                         </div>
 
