@@ -2,7 +2,9 @@
 
 import GoogleSignUp from "@/components/GoogleSignUp";
 import { authClient } from "@/lib/auth-client";
-import { User, Mail, Lock, Eye, EyeOff, Check } from "lucide-react";
+import { User, Mail, Eye} from "lucide-react";
+import Lottie from "lottie-react";
+import animationData from "@/assets/SignUp.json";
 import {
   Button,
   Description,
@@ -58,13 +60,20 @@ export default function SignUpPage() {
       <div className="max-w-4xl w-full mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
 
         <div className="hidden md:block md:w-[50%] relative bg-linear-to-br from-stone-800 to-stone-900">
-          <Image
+          <Lottie
+          animationData={animationData} 
+            loop
+            autoplay
+            className="object-cover bg-linear-to-r bg-sky-600 via-sky-500 to-sky-400 h-full"
+          ></Lottie>
+          
+          {/* <Image
             src={signUpImg}
             alt="Sign Up"
             width={600}
             height={600}
             className="absolute inset-0 w-full h-full object-cover"
-          />
+          /> */}
         </div>
 
         <div className="w-full md:w-[50%] p-5 md:p-6">

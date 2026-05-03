@@ -15,6 +15,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 - Better Auth
 - MongoDB Atlas
 - MongoDB Adapter
+- Lottie React
 - Render (Server Side)
 - Vercel (Client Side)
 

@@ -19,6 +19,8 @@ import { useState } from "react";
 import Image from "next/image";
 import signInImg from "@/assets/signin.png"
 import { EyeSlash } from "@gravity-ui/icons";
+import Lottie from "lottie-react";
+import animationData from "@/assets/Login.json";
 
 export default function SignUpPage() {
   const [isVisible, setIsVisible] = useState(false);
@@ -33,7 +35,7 @@ export default function SignUpPage() {
       email: userData.email,
       password: userData.password,
     });
-    
+
 
 
     if (data) {
@@ -44,8 +46,8 @@ export default function SignUpPage() {
       toast.error(error.message);
     }
   };
-  
-  
+
+
 
   return (
     <div className="min-h-screen bg-linear-to-br from-white via-amber-50/20 to-sky-50/30 flex items-center justify-center py-6 px-4">
@@ -56,13 +58,19 @@ export default function SignUpPage() {
       <div className="max-w-4xl w-full mx-auto bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row">
 
         <div className="hidden md:block md:w-[50%] relative bg-linear-to-br from-stone-800 to-stone-900">
-          <Image
+          <Lottie
+            animationData={animationData}
+            loop
+            autoplay
+            className="object-cover bg-linear-to-r bg-sky-500 via-sky-400 to-sky-300 h-full"
+          ></Lottie>
+          {/* <Image
             src={signInImg}
             alt="Sign In"
             width={600}
             height={600}
             className="absolute inset-0 w-full h-full object-cover"
-          />
+          /> */}
         </div>
 
         <div className="w-full md:w-[50%] p-5 md:p-6">
