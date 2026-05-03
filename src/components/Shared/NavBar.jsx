@@ -8,6 +8,7 @@ import { Button, Avatar } from '@heroui/react';
 import { useRouter } from 'next/navigation';
 import { authClient } from '@/lib/auth-client';
 import { MdOutlineLogout } from 'react-icons/md';
+import NavLink from './NavLink';
 
 const Navbar = () => {
     const router = useRouter();
@@ -28,36 +29,36 @@ const Navbar = () => {
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const links = <>
-        <Link
+        <NavLink
             href="/"
             className="text-amber-800 hover:text-sky-600 transition font-medium px-2 py-1 flex justify-start md:justify-between items-center gap-2"
             onClick={() => setIsMenuOpen(false)}
         >
             <FaHome className="text-sky-500" />
             Home
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
             href="/products"
             className="text-amber-800 hover:text-sky-600 transition font-medium px-2 py-1 flex justify-start md:justify-between items-center gap-2"
             onClick={() => setIsMenuOpen(false)}
         >
             <FaShoppingBasket className="text-sky-500" />
             Products
-        </Link>
-        <Link
+        </NavLink>
+        <NavLink
             href="/profile"
             className="text-amber-800 hover:text-sky-600 transition font-medium px-2 py-1 flex justify-start md:justify-between items-center gap-2"
             onClick={() => setIsMenuOpen(false)}
         >
             <FaUser className='text-sky-500' />
             My Profile
-        </Link>
+        </NavLink>
     </>
 
     return (
         <nav className="bg-amber-50/90 backdrop-blur-sm shadow-lg sticky top-0 z-50 border-b border-sky-100">
             <div className="w-11/12 mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center h-16">
+                <div className="flex justify-between items-center h-20">
 
                     <div className="flex items-center space-x-2 group">
                         <div className="relative">
@@ -70,7 +71,7 @@ const Navbar = () => {
                         </Link>
                     </div>
 
-                    <div className="hidden md:flex items-center space-x-8">
+                    <div className="hidden md:flex items-center space-x-6">
                         {links}
                     </div>
                     {user ?
@@ -104,24 +105,57 @@ const Navbar = () => {
                                 <span className="text-sm font-medium">Sign Out</span>
                             </Button>
                         </div> :
-                        isPending ? <span className='text-green-500 text-sm font-semibold'>Processing...</span> :
-                        <div className="hidden md:flex items-center gap-3">
-                            <Button onClick={() => router.push("/signin")}
-                                className="bg-transparent border-2 border-sky-500 text-sky-600 hover:bg-sky-50 hover:border-sky-600 font-semibold px-6 py-2 rounded-lg transition duration-200"
-                            >
-                                Sign In
-                            </Button>
-                            <Button onClick={() => router.push("/signup")}
-                                variant='secondary'
-                                className="bg-linear-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:shadow-lg transition duration-200"
-                            >
-                                Sign Up
-                            </Button>
-                        </div>}
+                        isPending ? <div className="flex items-center gap-2">
+                            <div className="w-3 h-3 border-2 border-emerald-600 border-t-transparent rounded-full animate-spin"></div>
+                            <span className='text-emerald-600 text-sm font-medium'>Processing...</span>
+                        </div> :
+                            <div className="hidden md:flex items-center gap-3">
+                                <Button onClick={() => router.push("/signin")}
+                                    className="bg-transparent border-2 border-sky-500 text-sky-600 hover:bg-sky-50 hover:border-sky-600 font-semibold px-6 py-2 rounded-lg transition duration-200"
+                                >
+                                    Sign In
+                                </Button>
+                                <Button onClick={() => router.push("/signup")}
+                                    variant='secondary'
+                                    className="bg-linear-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:shadow-lg transition duration-200"
+                                >
+                                    Sign Up
+                                </Button>
+                            </div>}
 
 
 
-                    <div className="md:hidden">
+                    <div className="md:hidden flex justify-between items-center gap-3">
+                        {user ?
+                            <div className='flex justify-between items-center gap-2'>
+                                <div className="relative group">
+                                    <div className="absolute -inset-0.5 bg-linear-to-r from-sky-500 to-amber-500 rounded-full opacity-75 group-hover:opacity-100 transition duration-300 blur"></div>
+                                    <Avatar className="relative">
+                                        <Avatar.Image
+                                            alt={user?.name || "User"}
+                                            src={user?.image}
+                                            className="object-cover"
+                                        />
+                                        <Avatar.Fallback className="bg-linear-to-r from-sky-500 to-cyan-400 text-white">
+                                            {user?.name?.charAt(0)}
+                                        </Avatar.Fallback>
+                                    </Avatar>
+                                </div>
+
+                                <div className="flex flex-col">
+                                    <span className="text-xs text-stone-400">Welcome back,</span>
+                                    <h2 className="text-sm font-semibold text-stone-700 line-clamp-1 max-w-30">
+                                        {user?.name}
+                                    </h2>
+                                </div>
+
+                            </div> :
+                            isPending ? <div className="flex items-center gap-2">
+                                <div className="w-3 h-3 border-2 border-emerald-600 border-t-transparent rounded-full animate-spin"></div>
+                                <span className='text-emerald-600 text-sm font-medium'>Processing...</span>
+                            </div> : ""}
+
+
                         <button
                             onClick={() => setIsMenuOpen(!isMenuOpen)}
                             className="text-amber-600 cursor-pointer hover:text-amber-700 focus:outline-none transition-colors"
@@ -137,19 +171,29 @@ const Navbar = () => {
                     <div className="md:hidden pb-6 pt-2 bg-amber-50/95 backdrop-blur-sm rounded-lg">
                         <div className="flex flex-col space-y-4 justify-start">
                             {links}
-                            <div className="flex flex-col gap-3 pt-2">
-                                <Button onClick={() => router.push("/signin")}
-                                    className="bg-transparent border-2 border-sky-500 text-sky-600 hover:bg-sky-50 font-semibold py-2 rounded-lg transition duration-200 w-full"
+                            {user ?
+                                <Button
+                                    onClick={handleSignOut}
+                                    className="bg-linear-to-r mt-2 w-full from-rose-500 to-rose-500 hover:from-rose-600 hover:to-pink-600 text-white flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
                                 >
-                                    Sign In
+                                    <MdOutlineLogout size={16} />
+                                    <span className="text-sm font-medium">Sign Out</span>
                                 </Button>
-                                <Button onClick={() => router.push("/signup")}
-                                    variant='secondary'
-                                    className="bg-linear-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-semibold py-2 rounded-lg shadow-md transition duration-200 w-full"
-                                >
-                                    Sign Up
-                                </Button>
-                            </div>
+                                : <div className="flex flex-col gap-3 pt-2">
+                                    <Button onClick={() => router.push("/signin")}
+                                        className="bg-transparent border-2 border-sky-500 text-sky-600 hover:bg-sky-50 font-semibold py-2 rounded-lg transition duration-200 w-full"
+                                    >
+                                        Sign In
+                                    </Button>
+                                    <Button onClick={() => router.push("/signup")}
+                                        variant='secondary'
+                                        className="bg-linear-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-semibold py-2 rounded-lg shadow-md transition duration-200 w-full"
+                                    >
+                                        Sign Up
+                                    </Button>
+                                </div>
+                            }
+
                         </div>
                     </div>
                 )}

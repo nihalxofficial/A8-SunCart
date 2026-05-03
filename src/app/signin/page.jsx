@@ -91,7 +91,7 @@ export default function SignUpPage() {
             >
               <Label className="text-stone-700 text-xs font-medium">Email Address</Label>
               <Input
-                placeholder="john@example.com"
+                placeholder="john@gmail.com"
                 startContent={<Mail size={12} className="text-stone-400" />}
                 className="border-stone-200 focus:border-sky-400 h-8 text-xs"
                 size="sm"
