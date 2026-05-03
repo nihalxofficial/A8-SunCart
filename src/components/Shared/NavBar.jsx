@@ -10,12 +10,22 @@ import { authClient } from '@/lib/auth-client';
 import { MdOutlineLogout } from 'react-icons/md';
 
 const Navbar = () => {
+    const router = useRouter();
 
     const { data: session, isPending, error } = authClient.useSession()
     const user = session?.user;
-    console.log(user);
+    const handleSignOut = async () => {
+        await authClient.signOut({
+            fetchOptions: {
+                onSuccess: () => {
+                    router.push("/signin");
+                },
+            },
+        });
 
-    const router = useRouter();
+    }
+
+
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const links = <>
         <Link
@@ -87,12 +97,14 @@ const Navbar = () => {
                             </div>
 
                             <Button
+                                onClick={handleSignOut}
                                 className="bg-linear-to-r from-rose-500 to-rose-500 hover:from-rose-600 hover:to-pink-600 text-white flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg"
                             >
                                 <MdOutlineLogout size={16} />
                                 <span className="text-sm font-medium">Sign Out</span>
                             </Button>
                         </div> :
+                        isPending ? <span className='text-green-500 text-sm font-semibold'>Processing...</span> :
                         <div className="hidden md:flex items-center gap-3">
                             <Button onClick={() => router.push("/signin")}
                                 className="bg-transparent border-2 border-sky-500 text-sky-600 hover:bg-sky-50 hover:border-sky-600 font-semibold px-6 py-2 rounded-lg transition duration-200"
