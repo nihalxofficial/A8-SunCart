@@ -1,25 +1,25 @@
 "use client";
 
-// import { authClient } from "@/lib/auth-client";
+import { authClient } from "@/lib/auth-client";
 import { Button, Input, Label, Modal, Surface, TextField } from "@heroui/react";
 import { Edit } from "lucide-react";
-import { BiEdit, BiUser } from "react-icons/bi";
+import {  BiUser } from "react-icons/bi";
 
 export function UpdateUserModal({ user }) {
-    // const userName = user?.name;
-    // const userImage = user?.image;
-    // const onSubmit = async (e) => {
-    //     e.preventDefault();
+    const userName = user?.name;
+    const userImage = user?.image;
+    const onSubmit = async (e) => {
+        e.preventDefault();
 
-    //     const name = e.target.name.value === "" ? userName : e.target.name.value;
-    //     const image = e.target.image.value === "" ? userImage : e.target.image.value;
+        const name = e.target.name.value === "" ? userName : e.target.name.value;
+        const image = e.target.image.value === "" ? userImage : e.target.image.value;
 
-    //     await authClient.updateUser({
-    //         name,
-    //         image
-    //     })
+        await authClient.updateUser({
+            name,
+            image
+        })
 
-    // };
+    };
     return (
         <Modal>
             <Button
@@ -43,7 +43,7 @@ export function UpdateUserModal({ user }) {
                         <Modal.Body className="p-6">
                             <Surface variant="default">
                                 <form
-                                    // onSubmit={onSubmit}
+                                    onSubmit={onSubmit}
                                     className="flex flex-col gap-4">
                                     <TextField className="w-full" name="name" type="text">
                                         <Label>Name</Label>
