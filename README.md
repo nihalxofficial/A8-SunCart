@@ -7,6 +7,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 - Lucide React
 - React Icons
 - Gravity Ui Icons
+- React Toast
 - HeroUI
 - Next.js
 - Json Server
@@ -20,6 +21,9 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## Topics
 - Remote image
 - Filter By Category
+- Authentication
+- Social Login
+- Protected Routes (Proxy)
 
 First, run the development server:
 

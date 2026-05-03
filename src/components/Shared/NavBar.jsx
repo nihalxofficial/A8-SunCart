@@ -5,8 +5,10 @@ import Link from 'next/link';
 import { Menu, Sun, X } from 'lucide-react';
 import { FaHome, FaShoppingBasket, FaUser } from 'react-icons/fa';
 import { Button } from '@heroui/react';
+import { useRouter } from 'next/navigation';
 
 const Navbar = () => {
+    const router = useRouter();
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const links = <>
         <Link
@@ -56,12 +58,12 @@ const Navbar = () => {
                     </div>
 
                     <div className="hidden md:flex items-center gap-3">
-                        <Button
+                        <Button onClick={()=>router.push("/signin")}
                             className="bg-transparent border-2 border-sky-500 text-sky-600 hover:bg-sky-50 hover:border-sky-600 font-semibold px-6 py-2 rounded-lg transition duration-200"
                         >
                             Sign In
                         </Button>
-                        <Button
+                        <Button onClick={()=>router.push("/signup")}
                             variant='secondary'
                             className="bg-linear-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-semibold px-6 py-2 rounded-lg shadow-md hover:shadow-lg transition duration-200"
                         >
@@ -86,12 +88,12 @@ const Navbar = () => {
                         <div className="flex flex-col space-y-4 justify-start">
                             {links}
                             <div className="flex flex-col gap-3 pt-2">
-                                <Button
+                                <Button onClick={()=>router.push("/signin")}
                                     className="bg-transparent border-2 border-sky-500 text-sky-600 hover:bg-sky-50 font-semibold py-2 rounded-lg transition duration-200 w-full"
                                 >
                                     Sign In
                                 </Button>
-                                <Button
+                                <Button onClick={()=>router.push("/signup")}
                                     variant='secondary'
                                     className="bg-linear-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 text-white font-semibold py-2 rounded-lg shadow-md transition duration-200 w-full"
                                 >
