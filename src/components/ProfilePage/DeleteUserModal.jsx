@@ -1,9 +1,19 @@
+"use client"
 import React from 'react';
 import { Button, Modal } from "@heroui/react"
 import { Trash2 } from 'lucide-react';
 import { TrashBin } from '@gravity-ui/icons';
+import { authClient } from '@/lib/auth-client';
+import { useRouter } from 'next/navigation';
 
 const DeleteUserModal = () => {
+    const router = useRouter();
+    const deleteUser =  async()=>{
+        const action = await authClient.deleteUser();
+        if(action){
+            router.push("/signup")
+        }
+    }
     return (
         <Modal>
             <Button
@@ -29,7 +39,7 @@ const DeleteUserModal = () => {
                             </p>
                         </Modal.Body>
                         <Modal.Footer>
-                            <Button className="w-full bg-linear-to-r from-rose-500 to-rose-400 hover:from-rose-600 hover:to-rose-500 text-white" slot="close">
+                            <Button onClick={deleteUser} className="w-full bg-linear-to-r from-rose-500 to-rose-400 hover:from-rose-600 hover:to-rose-500 text-white" slot="close">
                                 Yes, Delete
                             </Button>
                         </Modal.Footer>

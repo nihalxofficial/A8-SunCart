@@ -3,4 +3,4 @@ export const authClient = createAuthClient({
     baseURL: process.env.SUNCART_MONGO_URI
 })
 
-export const { signIn, signUp, signOut, useSession } = createAuthClient()
+export const { signIn, signUp, signOut, useSession, deleteUser } = createAuthClient()
