@@ -81,7 +81,7 @@ const ProductCard = ({ product, popularSale }) => {
             href={`/products/${product.id}`}
             className="flex-1 bg-linear-to-r from-sky-500 to-cyan-400 hover:from-sky-600 hover:to-cyan-500 text-white px-3 py-2 rounded-lg transition-all duration-200 shadow-md hover:shadow-lg flex items-center justify-center gap-2 text-sm font-semibold"
           >
-            <ShoppingCart size={16} /> Buy Now
+            <ShoppingCart size={16} /> View Details
           </Link>
 
           <button className="p-2 cursor-pointer rounded-lg bg-white border border-stone-200 text-stone-500 hover:bg-rose-50 hover:border-rose-300 hover:text-rose-500 transition">
@@ -89,7 +89,7 @@ const ProductCard = ({ product, popularSale }) => {
           </button>
 
           <button className="p-2 cursor-pointer rounded-lg bg-white border border-stone-200 text-stone-500 hover:bg-sky-50 hover:border-sky-300 hover:text-sky-600 transition">
-            <Eye size={18} />
+            <Link href={`/products/${product.id}`}><Eye size={18} /></Link>
           </button>
         </div>
       </div>
