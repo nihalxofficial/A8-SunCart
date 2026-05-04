@@ -27,21 +27,21 @@ const PopularProduct = () => {
     return (
       <div className="flex items-center gap-3">
         <div className="text-center">
-          <div className="bg-linear-to-r from-sky-500 to-cyan-400 text-white rounded-lg px-3 py-1 min-w-[50px]">
+          <div className="bg-linear-to-r from-sky-500 to-cyan-400 text-white rounded-lg px-3 py-1 min-w-12.5">
             <span className="text-2xl font-bold">{String(hours).padStart(2, '0')}</span>
           </div>
           <p className="text-xs text-stone-500 mt-1">Hours</p>
         </div>
         <span className="text-2xl font-bold text-amber-500">:</span>
         <div className="text-center">
-          <div className="bg-linear-to-r from-sky-500 to-cyan-400 text-white rounded-lg px-3 py-1 min-w-[50px]">
+          <div className="bg-linear-to-r from-sky-500 to-cyan-400 text-white rounded-lg px-3 py-1 min-w-12.5">
             <span className="text-2xl font-bold">{String(minutes).padStart(2, '0')}</span>
           </div>
           <p className="text-xs text-stone-500 mt-1">Minutes</p>
         </div>
         <span className="text-2xl font-bold text-amber-500">:</span>
         <div className="text-center">
-          <div className="bg-linear-to-r from-sky-500 to-cyan-400 text-white rounded-lg px-3 py-1 min-w-[50px]">
+          <div className="bg-linear-to-r from-sky-500 to-cyan-400 text-white rounded-lg px-3 py-1 min-w-12.5">
             <span className="text-2xl font-bold">{String(seconds).padStart(2, '0')}</span>
           </div>
           <p className="text-xs text-stone-500 mt-1">Seconds</p>

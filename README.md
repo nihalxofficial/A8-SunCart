@@ -140,7 +140,6 @@ SunCart uses **Better Auth** — a modern authentication library — integrated 
 ### Prerequisites
 
 - Node.js `v18+`
-- Next.js `v16+`
 - MongoDB Atlas account
 - Vercel account (for deployment)
 - Render account (for API server)
@@ -167,7 +166,7 @@ MONGODB_URI=your_mongodb_atlas_uri
 
 # Better Auth
 BETTER_AUTH_SECRET=your_auth_secret
-BETTER_AUTH_URL=http://localhost:3000 (For Local Server)
+BETTER_AUTH_URL=http://localhost:3000
 
 # OAuth (Google)
 GOOGLE_CLIENT_ID=your_google_client_id
@@ -248,7 +247,7 @@ SunCart's product data, categories and mock listings are powered by **JSON Serve
 ```bash
 # Clone the JSON Server repo
 git clone https://github.com/nihalxofficial/SunCart-Server
-cd suncart-json-server
+cd suncart-server
 
 # Install dependencies
 npm install
