@@ -1,0 +1,118 @@
+import Lottie from 'lottie-react';
+import { ArrowRight, Clock, Shield, Star } from 'lucide-react';
+import Link from 'next/link';
+import React from 'react';
+import animationData from "@/assets/lottie-slide-4.json";
+import { pacifico } from '@/lib/font';
+
+const SliderFour = () => {
+    return (
+        <div className="w-11/12 mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 lg:py-20">
+            <div className="flex flex-col-reverse lg:flex-row items-center gap-8 lg:gap-12">
+
+                <div className="flex-1 space-y-6 text-center lg:text-left">
+                    <div className="inline-flex items-center gap-2 bg-linear-to-r from-sky-500 to-cyan-400 text-white px-5 py-2 rounded-full text-sm font-semibold shadow-md mx-auto lg:mx-0">
+                        <span>💳 Trusted Payments</span>
+                    </div>
+
+                    <div>
+                        <p className="text-amber-500 text-sm font-semibold uppercase tracking-wide mb-1">100% Secure</p>
+                        <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl font-bold leading-tight">
+                            <span className={`text-sky-600 ${pacifico.className}`}>Secure</span>
+                            <br />
+                            <span className="text-amber-600">Fast & Trusted</span>
+                            <span className="text-amber-500">!</span>
+                        </h1>
+                    </div>
+
+                    <div className="border-l-4 border-amber-400 pl-5 mx-auto lg:mx-0 max-w-lg">
+                        <p className="text-stone-600 text-base sm:text-lg">
+                            Multiple payment options with bank-level security. Your money and data are always protected.
+                        </p>
+                    </div>
+
+                    <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
+                        <div className="flex items-center gap-2 bg-white shadow-sm rounded-lg px-3 py-2">
+                            <div className="bg-sky-100 p-1 rounded-full">
+                                <Shield size={16} className="text-sky-600" />
+                            </div>
+                            <span className="text-sm text-stone-600">Bank Level Security</span>
+                        </div>
+                        <div className="flex items-center gap-2 bg-white shadow-sm rounded-lg px-3 py-2">
+                            <div className="bg-amber-100 p-1 rounded-full">
+                                <Clock size={16} className="text-amber-600" />
+                            </div>
+                            <span className="text-sm text-stone-600">Instant Processing</span>
+                        </div>
+                        <div className="flex items-center gap-2 bg-white shadow-sm rounded-lg px-3 py-2">
+                            <div className="bg-sky-100 p-1 rounded-full">
+                                <Star size={16} className="text-sky-600" />
+                            </div>
+                            <span className="text-sm text-stone-600">100% Trusted</span>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <Link
+                            href="/checkout"
+                            className="bg-linear-to-r from-sky-500 to-cyan-400 hover:from-sky-600 hover:to-cyan-500 text-white font-semibold px-8 py-3 rounded-xl transition-all duration-200 shadow-md hover:shadow-xl flex items-center justify-center gap-2 group"
+                        >
+                            Pay Securely
+                            <ArrowRight size={18} className="group-hover:translate-x-1 transition" />
+                        </Link>
+                        <Link
+                            href="/payment-methods"
+                            className="bg-amber-500 hover:bg-amber-600 text-white font-semibold px-8 py-3 rounded-xl transition duration-200 flex items-center justify-center gap-2 shadow-md hover:shadow-lg"
+                        >
+                            View Methods 💳
+                        </Link>
+                    </div>
+                </div>
+
+                <div className="flex-1 relative w-full">
+                    <div className="absolute inset-0 bg-linear-to-br from-sky-200/30 to-amber-200/30 rounded-full blur-3xl"></div>
+                    <div className="absolute -top-10 -right-10 w-40 h-40 bg-amber-500/20 rounded-full blur-2xl hidden sm:block"></div>
+                    <div className="absolute -bottom-10 -left-10 w-40 h-40 bg-sky-500/20 rounded-full blur-2xl hidden sm:block"></div>
+                    <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-60 h-60 bg-cyan-400/10 rounded-full blur-3xl hidden lg:block"></div>
+
+                    <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-112 bg-linear-to-br from-sky-100 to-amber-50 rounded-2xl shadow-2xl overflow-hidden border border-sky-200">
+                        <div className="relative w-full h-full flex items-center justify-center">
+                            <Lottie
+                                animationData={animationData}
+                                loop
+                                autoplay
+                                className="object-cover bg-linear-to-r bg-sky-500 via-sky-400 to-sky-300 h-full w-full"
+                            />
+                        </div>
+                    </div>
+
+                    <div className="absolute -top-4 -left-4 sm:-top-6 sm:-left-6 bg-white rounded-xl shadow-lg p-2 sm:p-3 border-l-4 border-sky-500 transform rotate-[-5deg] hover:rotate-0 transition">
+                        <p className="text-xs text-stone-500">Accepted Payments</p>
+                        <p className="text-lg sm:text-xl font-bold bg-linear-to-r from-sky-600 to-cyan-500 bg-clip-text text-transparent">
+                            Visa | Mastercard | Stripe
+                        </p>
+                    </div>
+
+                    <div className="absolute -bottom-4 -right-4 sm:-bottom-6 sm:-right-6 bg-white rounded-xl shadow-lg p-2 sm:p-3 border-r-4 border-amber-500 transform rotate-[5deg] hover:rotate-0 transition">
+                        <p className="text-xs text-stone-500">Trust Score</p>
+                        <p className="text-base sm:text-lg font-bold text-amber-600">99.9% Secure</p>
+                    </div>
+
+                    <div className="absolute top-1/2 -right-4 sm:-right-6 transform -translate-y-1/2 bg-white rounded-xl shadow-lg p-2 sm:p-3 border-t-4 border-cyan-400 hidden md:block">
+                        <div className="flex items-center gap-2">
+                            <div className="w-6 h-6 sm:w-8 sm:h-8 bg-linear-to-r from-cyan-400 to-sky-500 rounded-full flex items-center justify-center">
+                                <Shield size={12} className="text-white fill-white" />
+                            </div>
+                            <div>
+                                <p className="text-xs text-stone-500">Encryption</p>
+                                <p className="text-sm font-bold text-stone-700">256-bit SSL</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    );
+};
+
+export default SliderFour;

@@ -16,6 +16,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 - MongoDB Atlas
 - MongoDB Adapter
 - Lottie React
+- Animate Css
+- Swiper
 - Render (Server Side)
 - Vercel (Client Side)
 
