@@ -38,6 +38,8 @@ Whether you're browsing flash sales with live countdown timers, discovering summ
 | 🔐 **Authentication** | Email/password + Social Login (Google etc.) |
 | 👤 **User Management** | Update profile, delete account |
 | 🗂️ **Category Browsing** | 10+ categories: Clothing, Skincare, Electronics and more |
+| 🔍 **Searching** | Real-time product search by name, brand or keyword |
+| 🔃 **Sort & Filter** | Sort by price, rating, newest and more; filter by category and price range |
 | 🏷️ **Top Brands** | Nike, Apple, Adidas, Samsung — with brand-specific pages |
 | 🌐 **Remote Images** | Next.js optimized remote image delivery |
 | 🔒 **Protected Routes** | Middleware-based proxy route protection |
@@ -91,6 +93,8 @@ Whether you're browsing flash sales with live countdown timers, discovering summ
 ```
 ✅ Remote Image Optimization      — Next.js Image with external domains
 ✅ Filter By Category             — Dynamic URL-based category filtering
+✅ Search                         — Real-time keyword search across products and brands
+✅ Sort & Filter                  — Multi-criteria sorting and rate/price filtering
 ✅ Authentication                 — Secure session-based auth with Better Auth
 ✅ Social Login                   — OAuth provider integration (Google, etc.)
 ✅ Metadata                       — SEO-friendly dynamic page metadata
