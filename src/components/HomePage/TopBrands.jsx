@@ -24,7 +24,7 @@ const TopBrands = () => {
             reviews: "2.3k",
             logo: "https://upload.wikimedia.org/wikipedia/commons/a/a6/Logo_NIKE.svg",
             logoAlt: "Nike Logo",
-            offer: "Up to 40% OFF",
+            offer: "Up to 50% OFF",
             bgGradient: "from-sky-500 to-cyan-400",
             iconBg: "bg-sky-100",
             textColor: "text-sky-600",
