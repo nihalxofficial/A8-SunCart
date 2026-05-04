@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ChevronRight, Filter, Grid3x3, List } from 'lucide-react';
+import { Description, Input, Label, SearchField } from '@heroui/react';
 import ProductCard from '@/components/Shared/ProductCard';
 import { getCategories, getProducts } from '@/lib/data';
 
@@ -10,23 +11,41 @@ const ProductsPage = async ({ searchParams }) => {
     const products = await getProducts();
     const categories = await getCategories();
 
-
     const filteredProducts = category ? products.filter(product => product.category.toLowerCase() === category.toLowerCase()) : products;
 
     return (
         <div className="bg-linear-to-b from-white to-amber-50/20 min-h-screen">
             <div className="w-11/12 mx-auto px-4 sm:px-6 lg:px-8 py-6 md:py-8">
 
-                <div className="mb-8">
-                    <div className="flex items-center gap-2 mb-2">
-                        <div className="w-8 h-0.5 bg-linear-to-r from-sky-500 to-amber-500"></div>
-                        <span className="text-sm font-medium text-amber-600 uppercase tracking-wide">Shop Collection</span>
+                <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 mb-8">
+                    <div>
+                        <div className="flex items-center gap-2 mb-2">
+                            <div className="w-8 h-0.5 bg-linear-to-r from-sky-500 to-amber-500"></div>
+                            <span className="text-sm font-medium text-amber-600 uppercase tracking-wide">Shop Collection</span>
+                        </div>
+                        <h1 className="text-3xl md:text-4xl font-bold">
+                            <span className="text-sky-600">All</span>
+                            <span className="text-amber-600"> Products</span>
+                        </h1>
+                        <p className="text-stone-500 text-sm mt-2">Browse our complete collection of summer essentials</p>
                     </div>
-                    <h1 className="text-3xl md:text-4xl font-bold">
-                        <span className="text-sky-600">All</span>
-                        <span className="text-amber-600"> Products</span>
-                    </h1>
-                    <p className="text-stone-500 text-sm mt-2">Browse our complete collection of summer essentials</p>
+
+                    <SearchField name="search" className="w-70">
+                        <SearchField.Group className="relative flex items-center">
+                            <div className="absolute left-3 z-10">
+                                <SearchField.SearchIcon className="text-stone-400 w-4 h-4" />
+                            </div>
+                            <SearchField.Input
+                                className="w-full pl-9 pr-9 py-2 rounded-xl border border-sky-200 bg-white text-stone-700 placeholder:text-stone-400 focus:outline-none focus:border-sky-500 focus:ring-2 focus:ring-sky-100 transition-all duration-200 text-sm"
+                                placeholder="Search products..."
+                                style={{ paddingLeft: "2.5rem" }}
+                            />
+                            <div className="absolute right-3">
+                                <SearchField.ClearButton className="text-stone-400 hover:text-amber-500 transition-colors" />
+                            </div>
+                        </SearchField.Group>
+                        <Description className="text-stone-400 text-xs mt-1 ml-1">Enter keywords to search for products</Description>
+                    </SearchField>
                 </div>
 
                 <div className="flex flex-col md:flex-row gap-6">
@@ -47,13 +66,13 @@ const ProductsPage = async ({ searchParams }) => {
                             <div className="p-3">
                                 <Link
                                     href="/products"
-                                    className={`flex  items-center justify-between px-3 py-2.5 rounded-lg bg-linear-to-r ${!category ? "from-sky-500 to-cyan-400 text-white font-semibold" : "hover:bg-amber-50 text-stone-600 hover:text-sky-600 text-sm transition group"} `}
+                                    className={`flex items-center justify-between px-3 py-2.5 rounded-lg ${!category ? "bg-linear-to-r from-sky-500 to-cyan-400 text-white font-semibold" : "hover:bg-amber-50 text-stone-600 hover:text-sky-600 text-sm transition group"}`}
                                 >
                                     <span className="flex items-center gap-2">
                                         <ChevronRight size={12} className="opacity-0 group-hover:opacity-100 transition text-amber-500" />
                                         All Products
                                     </span>
-                                    <span className="text-xs pl-5  py-0.5 rounded-full">{products.length}</span>
+                                    <span className="text-xs pl-5 py-0.5 rounded-full">{products.length}</span>
                                 </Link>
 
                                 {categories.map((cat) => {
@@ -62,7 +81,7 @@ const ProductsPage = async ({ searchParams }) => {
                                         <Link
                                             key={cat.id}
                                             href={`/products?category=${cat.name.toLowerCase()}`}
-                                            className={`flex items-center justify-between px-3 py-2 rounded-lg bg-linear-to-r ${category?.toLowerCase() === cat.name.toLowerCase() ? "from-sky-500 to-cyan-400 text-white font-semibold" : "hover:bg-amber-50 text-stone-600 hover:text-sky-600 text-sm transition group"}`}
+                                            className={`flex items-center justify-between px-3 py-2 rounded-lg ${category?.toLowerCase() === cat.name.toLowerCase() ? "bg-linear-to-r from-sky-500 to-cyan-400 text-white font-semibold" : "hover:bg-amber-50 text-stone-600 hover:text-sky-600 text-sm transition group"}`}
                                         >
                                             <span className="flex items-center gap-2">
                                                 <ChevronRight size={12} className="opacity-0 group-hover:opacity-100 transition text-amber-500" />
@@ -76,7 +95,7 @@ const ProductsPage = async ({ searchParams }) => {
 
                             <div className="p-4 border-t border-sky-100 bg-linear-to-r from-amber-50/50 to-sky-50/50">
                                 <p className="text-xs text-stone-500 text-center">
-                                    Showing <span className="font-semibold text-sky-600">{products.length}</span> products
+                                    Showing <span className="font-semibold text-sky-600">{filteredProducts.length}</span> products
                                 </p>
                             </div>
                         </div>
