@@ -23,13 +23,13 @@ const Navbar = () => {
                 },
             },
         });
-
     }
 
 
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const links = <>
         <NavLink
+
             href="/"
             className="text-amber-800 hover:text-sky-600 transition font-medium px-2 py-1 flex justify-start md:justify-between items-center gap-2"
             onClick={() => setIsMenuOpen(false)}
@@ -106,7 +106,7 @@ const Navbar = () => {
                                 <span className="text-sm font-medium">Sign Out</span>
                             </Button>
                         </div> :
-                        isPending ? <div className="flex items-center gap-2">
+                        isPending ? <div className="hidden md:flex items-center gap-2">
                             <div className="w-3 h-3 border-2 border-emerald-600 border-t-transparent rounded-full animate-spin"></div>
                             <span className='text-emerald-600 text-sm font-medium'>Processing...</span>
                         </div> :
