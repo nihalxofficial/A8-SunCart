@@ -19,6 +19,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 - Animate Css
 - Swiper
 - Marquee
+- React Countdown
 - Render (Server Side)
 - Vercel (Client Side)
 
