@@ -1,3 +1,4 @@
+import CustomerReview from "@/components/CustomerReview";
 import HeroBanner from "@/components/HomePage/Banner";
 import CategorySection from "@/components/HomePage/CategorySection";
 import PopularProduct from "@/components/HomePage/PopularProduct";
@@ -9,10 +10,10 @@ export default function Home() {
   return (
     <div>
       <HeroBanner/>
-      {/* <PromotionsOffers/> */}
       <PopularProduct/>
       <CategorySection/>
       <TopBrands/>
+      <CustomerReview/>
       <SummerCareTips/>
     </div>
   );

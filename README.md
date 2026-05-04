@@ -18,6 +18,7 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 - Lottie React
 - Animate Css
 - Swiper
+- Marquee
 - Render (Server Side)
 - Vercel (Client Side)
 
