@@ -33,8 +33,21 @@ const ProductCard = ({ product, popularSale }) => {
         </div>
 
         <div className="absolute bottom-3 left-3 bg-white/95 backdrop-blur-sm rounded-full px-2.5 py-1 flex items-center gap-1 shadow-md">
-          <Star size={12} className="fill-yellow-400 text-yellow-400" />
-          <span className="text-xs font-bold text-stone-700">{product.rating}</span>
+          <div className="flex items-center gap-0.5">
+            {[1, 2, 3, 4, 5].map((star) => (
+              <Star
+                key={star}
+                size={12}
+                className={`${star <= Math.round(product.rating || 0)
+                    ? 'fill-yellow-400 text-yellow-400'
+                    : 'fill-gray-200 text-gray-200'
+                  }`}
+              />
+            ))}
+          </div>
+          <span className="text-xs font-bold text-stone-700 ml-1">
+            ({product.rating?.toFixed(1) || '0.0'})
+          </span>
         </div>
       </div>
 
@@ -58,7 +71,7 @@ const ProductCard = ({ product, popularSale }) => {
           {product.category}
         </p>
 
-        <div className="mb-4 flex gap-2  items-center">
+        <div className="mb-4 flex gap-2 items-center">
           <span className="text-2xl font-bold text-amber-600">${product.price}</span>
           <span className="text-sm text-stone-400 line-through">${(product.price * 2).toFixed(2)}</span>
         </div>
