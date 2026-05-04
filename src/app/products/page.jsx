@@ -5,10 +5,12 @@ import { ChevronRight, Filter, Grid3x3, List } from 'lucide-react';
 import ProductCard from '@/components/Shared/ProductCard';
 import { getCategories, getProducts } from '@/lib/data';
 import SearchBox from '@/components/Shared/SearchBox';
+import SortSelect from '@/components/Shared/SortSelect';
 
 const ProductsPage = async ({ searchParams }) => {
     const { category } = await searchParams;
     const { search } = await searchParams;
+    const { sort } = await searchParams;
 
     const products = await getProducts();
     const categories = await getCategories();
@@ -25,7 +27,23 @@ const ProductsPage = async ({ searchParams }) => {
             : true;
 
         return matchCategory && matchSearch;
+
     });
+
+    function sortProducts(filteredProducts, sort) {
+        switch (sort) {
+            case 'price_asc':
+                return [...filteredProducts].sort((a, b) => a.price - b.price);
+            case 'price_desc':
+                return [...filteredProducts].sort((a, b) => b.price - a.price);
+            case 'rating':
+                return [...filteredProducts].sort((a, b) => b.rating - a.rating);
+            default:
+                return filteredProducts;
+        }
+    }
+
+    const sortedProducts = sortProducts(filteredProducts, sort);
 
     return (
         <div className="bg-linear-to-b from-white to-amber-50/20 min-h-screen">
@@ -94,7 +112,7 @@ const ProductsPage = async ({ searchParams }) => {
 
                             <div className="p-4 border-t border-sky-100 bg-linear-to-r from-amber-50/50 to-sky-50/50">
                                 <p className="text-xs text-stone-500 text-center">
-                                    Showing <span className="font-semibold text-sky-600">{filteredProducts.length}</span> products
+                                    Showing <span className="font-semibold text-sky-600">{sortedProducts.length}</span> products
                                 </p>
                             </div>
                         </div>
@@ -105,17 +123,12 @@ const ProductsPage = async ({ searchParams }) => {
                             <div className="flex flex-wrap items-center justify-between gap-3">
                                 <div>
                                     <p className="text-sm text-stone-600">
-                                        <span className="font-semibold text-sky-600">{filteredProducts.length}</span> products found
+                                        <span className="font-semibold text-sky-600">{sortedProducts.length}</span> products found
                                     </p>
                                 </div>
                                 <div className="flex items-center gap-3">
                                     <span className="text-xs text-stone-500">Sort by:</span>
-                                    <select className="text-sm border border-sky-200 rounded-lg px-3 py-1.5 focus:outline-none focus:border-sky-400 bg-white text-stone-600">
-                                        <option>Featured</option>
-                                        <option>Price: Low to High</option>
-                                        <option>Price: High to Low</option>
-                                        <option>Best Rating</option>
-                                    </select>
+                                    <SortSelect />
                                     <div className="flex gap-1 border-l border-sky-200 pl-3">
                                         <button className="p-1.5 cursor-pointer rounded bg-sky-50 text-sky-600">
                                             <Grid3x3 size={16} />
@@ -129,10 +142,10 @@ const ProductsPage = async ({ searchParams }) => {
                         </div>
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-5">
-                            {filteredProducts.map((product) => <ProductCard key={product.id} product={product} />)}
+                            {sortedProducts.map((product) => <ProductCard key={product.id} product={product} />)}
                         </div>
 
-                        {filteredProducts.length === 0 && (
+                        {sortedProducts.length === 0 && (
                             <div className="bg-white rounded-xl shadow-md p-12 text-center border border-sky-100">
                                 <p className="text-stone-500">No products found</p>
                             </div>
