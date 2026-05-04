@@ -24,24 +24,6 @@ const ProductNotFound = () => {
                     Oops! The product you&apos;re looking for doesn&apos;t exist or has been removed.
                 </p>
 
-                <div className="bg-white rounded-xl p-4 mb-6 text-left border border-sky-100">
-                    <p className="text-sm font-semibold text-stone-700 mb-2">💡 You might want to:</p>
-                    <ul className="text-sm text-stone-500 space-y-1.5">
-                        <li className="flex items-center gap-2">
-                            <span className="w-1 h-1 bg-sky-400 rounded-full"></span>
-                            Check the URL for typos
-                        </li>
-                        <li className="flex items-center gap-2">
-                            <span className="w-1 h-1 bg-sky-400 rounded-full"></span>
-                            Browse our popular categories
-                        </li>
-                        <li className="flex items-center gap-2">
-                            <span className="w-1 h-1 bg-sky-400 rounded-full"></span>
-                            Return to the products page
-                        </li>
-                    </ul>
-                </div>
-
                 <div className="flex flex-col sm:flex-row gap-3 justify-center">
                     <Link
                         href="/products"

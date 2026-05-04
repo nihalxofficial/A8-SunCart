@@ -1,7 +1,5 @@
 'use client';
 
-import Link from 'next/link';
-import { ArrowRight, ShoppingBag, Star, Truck, Shield, Clock } from 'lucide-react';
 import { Pagination, Navigation, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SliderOne from '../slider/SliderOne';

@@ -6,16 +6,8 @@ import {
     ShoppingCart,
     Heart,
     Share2,
-    Shield,
-    Truck,
-    RefreshCw,
-    Check,
     Minus,
     Plus,
-    Sun,
-    Droplet,
-    Eye,
-    Package,
     ArrowLeft
 } from 'lucide-react';
 import ProductNotFound from '@/components/ProductNotFound';

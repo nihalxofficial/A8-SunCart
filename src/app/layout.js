@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Inter, Poppins } from "next/font/google";
+import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Shared/NavBar";
 import Footer from "@/components/Shared/Footer";
@@ -31,7 +31,7 @@ export default function RootLayout({ children }) {
         <Navbar />
         <main className="">{children}</main>
         <Footer />
-        <ToastContainer />
+        <ToastContainer autoClose={2000} />
       </body>
     </html>
   );

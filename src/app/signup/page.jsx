@@ -40,7 +40,7 @@ export default function SignUpPage() {
 
     if (data) {
       toast.success("SignUp Successful");
-      router.push("/");
+      router.push("/signin");
     }
     if (error) {
       toast.error(error.message);
